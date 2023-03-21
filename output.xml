@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230321 12:56:07.196" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCaseEscolhaProduto" source="f:\projetoPython\iterasys\Mobile\testeSuit\TestCaseEscolhaProduto.robot">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>== Suite: APP EXTRA ==</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230321 12:56:07.401" endtime="20230321 12:56:07.401"/>
+</kw>
+<test id="s1-t1" name="Escolher produto" line="14">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>\n==== INICIO DA AUTOMACAO ====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230321 12:56:07.402" endtime="20230321 12:56:07.403"/>
+</kw>
+<kw name="Dado que estou na tela inicial" library="PageEscolhaProduto">
+<kw name="Abrir o app" library="config">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>appium:automationName=${appium:automationName}</arg>
+<arg>appium:deviceName=${appium:deviceName}</arg>
+<arg>appium:appPackage=${appium:appPackage}</arg>
+<arg>appium:appActivity=${appium:appActivity}</arg>
+<arg>appium:avd=${appium:avd}</arg>
+<arg>appium:ensureWebviewsHavePages=${appium:ensureWebviewsHavePages}</arg>
+<arg>appium:nativeWebScreenshot=${appium:nativeWebScreenshot}</arg>
+<arg>appium:newCommandTimeout=${appium:newCommandTimeout}</arg>
+<arg>appium:connectHardwareKeyboard=${appium:connectHardwareKeyboard}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230321 12:56:07.404" endtime="20230321 12:56:13.957"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230321 12:56:23.958" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230321 12:56:13.957" endtime="20230321 12:56:23.959"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:07.403" endtime="20230321 12:56:23.959"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:07.403" endtime="20230321 12:56:23.959"/>
+</kw>
+<kw name="Quando eu pesquisar pelo produto" library="PageEscolhaProduto">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/tv_home_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:23.961" level="INFO">Clicking element 'id=com.novapontocom.extra:id/tv_home_search'.</msg>
+<msg timestamp="20230321 12:56:26.166" level="INFO">criteria is com.novapontocom.extra:id/tv_home_search</msg>
+<status status="PASS" starttime="20230321 12:56:23.960" endtime="20230321 12:56:26.167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/editTextSearchProducts</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:27.612" level="INFO">criteria is com.novapontocom.extra:id/editTextSearchProducts
+criteria is com.novapontocom.extra:id/editTextSearchProducts</msg>
+<status status="PASS" starttime="20230321 12:56:26.167" endtime="20230321 12:56:27.612"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/editTextSearchProducts</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:27.613" level="INFO">Clicking element 'id=com.novapontocom.extra:id/editTextSearchProducts'.</msg>
+<msg timestamp="20230321 12:56:28.444" level="INFO">criteria is com.novapontocom.extra:id/editTextSearchProducts</msg>
+<status status="PASS" starttime="20230321 12:56:27.612" endtime="20230321 12:56:28.445"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/editTextSearchProducts</arg>
+<arg>geladeira</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:28.447" level="INFO">Typing text 'geladeira' into text field 'id=com.novapontocom.extra:id/editTextSearchProducts'</msg>
+<msg timestamp="20230321 12:56:29.213" level="INFO">criteria is com.novapontocom.extra:id/editTextSearchProducts</msg>
+<status status="PASS" starttime="20230321 12:56:28.446" endtime="20230321 12:56:29.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/editTextSearchProducts</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:30.406" level="INFO">criteria is com.novapontocom.extra:id/editTextSearchProducts</msg>
+<status status="PASS" starttime="20230321 12:56:29.214" endtime="20230321 12:56:30.407"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/editTextSearchProducts</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:30.408" level="INFO">Clicking element 'id=com.novapontocom.extra:id/editTextSearchProducts'.</msg>
+<msg timestamp="20230321 12:56:31.257" level="INFO">criteria is com.novapontocom.extra:id/editTextSearchProducts</msg>
+<status status="PASS" starttime="20230321 12:56:30.407" endtime="20230321 12:56:31.257"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:23.959" endtime="20230321 12:56:31.257"/>
+</kw>
+<kw name="E clico no produto" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.TextView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:31.983" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230321 12:56:31.258" endtime="20230321 12:56:31.983"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.TextView</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:31.985" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.TextView'.</msg>
+<msg timestamp="20230321 12:56:32.729" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230321 12:56:31.983" endtime="20230321 12:56:32.730"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230321 12:56:35.730" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230321 12:56:32.730" endtime="20230321 12:56:35.730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ViewFlipper/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ViewSwitcher/android.view.ViewGroup/android.widget.TextView[1]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:35.973" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ViewFlipper/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ViewSwitcher/android.view.ViewGroup/android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20230321 12:56:35.730" endtime="20230321 12:56:35.973"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ViewFlipper/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ViewSwitcher/android.view.ViewGroup/android.widget.TextView[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:35.975" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ViewFlipper/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ViewSwitcher/android.view.ViewGroup/android.widget.TextView[1]'.</msg>
+<msg timestamp="20230321 12:56:36.171" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ViewFlipper/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ViewSwitcher/android.view.ViewGroup/android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20230321 12:56:35.973" endtime="20230321 12:56:36.171"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:31.258" endtime="20230321 12:56:36.172"/>
+</kw>
+<kw name="E verifico nome e preco e clico no produto" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/textViewProductName</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:40.320" level="INFO">criteria is com.novapontocom.extra:id/textViewProductName
+criteria is com.novapontocom.extra:id/textViewProductName</msg>
+<status status="PASS" starttime="20230321 12:56:36.173" endtime="20230321 12:56:40.320"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${texto_elemento}</var>
+<arg>id=com.novapontocom.extra:id/textViewProductName</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230321 12:56:40.370" level="INFO">Element 'id=com.novapontocom.extra:id/textViewProductName' text is 'Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L' </msg>
+<msg timestamp="20230321 12:56:40.370" level="INFO">criteria is com.novapontocom.extra:id/textViewProductName</msg>
+<msg timestamp="20230321 12:56:40.370" level="INFO">${texto_elemento} = Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</msg>
+<status status="PASS" starttime="20230321 12:56:40.320" endtime="20230321 12:56:40.371"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${texto_esperado}</var>
+<arg>Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230321 12:56:40.371" level="INFO">${texto_esperado} = Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</msg>
+<status status="PASS" starttime="20230321 12:56:40.371" endtime="20230321 12:56:40.371"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${texto_elemento}</arg>
+<arg>${texto_esperado}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230321 12:56:40.372" endtime="20230321 12:56:40.372"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/textViewProductName</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:40.373" level="INFO">Clicking element 'id=com.novapontocom.extra:id/textViewProductName'.</msg>
+<msg timestamp="20230321 12:56:40.466" level="INFO">criteria is com.novapontocom.extra:id/textViewProductName</msg>
+<status status="PASS" starttime="20230321 12:56:40.372" endtime="20230321 12:56:40.466"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:36.172" endtime="20230321 12:56:40.466"/>
+</kw>
+<kw name="E escolho a variacao de voltagem" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/imageViewModelSelectionIndicator</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:40.527" level="INFO">criteria is com.novapontocom.extra:id/imageViewModelSelectionIndicator</msg>
+<status status="PASS" starttime="20230321 12:56:40.468" endtime="20230321 12:56:40.528"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/imageViewModelSelectionIndicator</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:40.530" level="INFO">Clicking element 'id=com.novapontocom.extra:id/imageViewModelSelectionIndicator'.</msg>
+<msg timestamp="20230321 12:56:40.622" level="INFO">criteria is com.novapontocom.extra:id/imageViewModelSelectionIndicator</msg>
+<status status="PASS" starttime="20230321 12:56:40.528" endtime="20230321 12:56:40.622"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230321 12:56:42.623" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230321 12:56:40.622" endtime="20230321 12:56:42.623"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:42.696" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230321 12:56:42.623" endtime="20230321 12:56:42.696"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:42.697" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView'.</msg>
+<msg timestamp="20230321 12:56:42.815" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230321 12:56:42.696" endtime="20230321 12:56:42.816"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/buttonSelect</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:42.818" level="INFO">Clicking element 'id=com.novapontocom.extra:id/buttonSelect'.</msg>
+<msg timestamp="20230321 12:56:43.849" level="INFO">criteria is com.novapontocom.extra:id/buttonSelect</msg>
+<status status="PASS" starttime="20230321 12:56:42.816" endtime="20230321 12:56:43.849"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230321 12:56:45.851" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230321 12:56:43.850" endtime="20230321 12:56:45.851"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:40.468" endtime="20230321 12:56:45.851"/>
+</kw>
+<kw name="E prosigo sem garantia extra" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ViewFlipper/android.widget.LinearLayout/android.view.ViewGroup[1]/android.widget.TextView[1]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:46.003" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ViewFlipper/android.widget.LinearLayout/android.view.ViewGroup[1]/android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20230321 12:56:45.852" endtime="20230321 12:56:46.003"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ViewFlipper/android.widget.LinearLayout/android.view.ViewGroup[1]/android.widget.TextView[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:46.005" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ViewFlipper/android.widget.LinearLayout/android.view.ViewGroup[1]/android.widget.TextView[1]'.</msg>
+<msg timestamp="20230321 12:56:46.635" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ViewFlipper/android.widget.LinearLayout/android.view.ViewGroup[1]/android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20230321 12:56:46.004" endtime="20230321 12:56:46.636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/button</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:46.715" level="INFO">criteria is com.novapontocom.extra:id/button</msg>
+<status status="PASS" starttime="20230321 12:56:46.636" endtime="20230321 12:56:46.715"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:46.716" level="INFO">Clicking element 'id=com.novapontocom.extra:id/button'.</msg>
+<msg timestamp="20230321 12:56:47.432" level="INFO">criteria is com.novapontocom.extra:id/button</msg>
+<status status="PASS" starttime="20230321 12:56:46.716" endtime="20230321 12:56:47.432"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:45.851" endtime="20230321 12:56:47.432"/>
+</kw>
+<kw name="E adiciono ao carrinho" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/button</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:56:49.291" level="INFO">criteria is com.novapontocom.extra:id/button
+criteria is com.novapontocom.extra:id/button
+criteria is com.novapontocom.extra:id/button
+criteria is com.novapontocom.extra:id/button</msg>
+<status status="PASS" starttime="20230321 12:56:47.433" endtime="20230321 12:56:49.292"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230321 12:56:49.294" level="INFO">Clicking element 'id=com.novapontocom.extra:id/button'.</msg>
+<msg timestamp="20230321 12:56:50.417" level="INFO">criteria is com.novapontocom.extra:id/button</msg>
+<status status="PASS" starttime="20230321 12:56:49.292" endtime="20230321 12:56:50.417"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230321 12:57:00.419" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230321 12:56:50.418" endtime="20230321 12:57:00.419"/>
+</kw>
+<status status="PASS" starttime="20230321 12:56:47.433" endtime="20230321 12:57:00.419"/>
+</kw>
+<kw name="Entao verifico nome e preco e voltagem" library="PageEscolhaProduto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.novapontocom.extra:id/tv_card_product_name</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230321 12:57:00.485" level="INFO">criteria is com.novapontocom.extra:id/tv_card_product_name</msg>
+<status status="PASS" starttime="20230321 12:57:00.420" endtime="20230321 12:57:00.485"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${texto_elemento}</var>
+<arg>id=com.novapontocom.extra:id/tv_card_product_name</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230321 12:57:00.546" level="INFO">Element 'id=com.novapontocom.extra:id/tv_card_product_name' text is 'Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L' </msg>
+<msg timestamp="20230321 12:57:00.548" level="INFO">criteria is com.novapontocom.extra:id/tv_card_product_name</msg>
+<msg timestamp="20230321 12:57:00.548" level="INFO">${texto_elemento} = Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</msg>
+<status status="PASS" starttime="20230321 12:57:00.485" endtime="20230321 12:57:00.548"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${texto_esperado}</var>
+<arg>Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230321 12:57:00.548" level="INFO">${texto_esperado} = Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone Inox - 375L</msg>
+<status status="PASS" starttime="20230321 12:57:00.548" endtime="20230321 12:57:00.548"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${texto_elemento_voltagem}</var>
+<arg>id=com.novapontocom.extra:id/tv_product_variation</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230321 12:57:00.631" level="INFO">Element 'id=com.novapontocom.extra:id/tv_product_variation' text is '220V' </msg>
+<msg timestamp="20230321 12:57:00.631" level="INFO">criteria is com.novapontocom.extra:id/tv_product_variation</msg>
+<msg timestamp="20230321 12:57:00.632" level="INFO">${texto_elemento_voltagem} = 220V</msg>
+<status status="PASS" starttime="20230321 12:57:00.549" endtime="20230321 12:57:00.632"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${texto_voltagem_esperado}</var>
+<arg>220V</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230321 12:57:00.632" level="INFO">${texto_voltagem_esperado} = 220V</msg>
+<status status="PASS" starttime="20230321 12:57:00.632" endtime="20230321 12:57:00.632"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${texto_elemento_voltagem}</arg>
+<arg>${texto_voltagem_esperado}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230321 12:57:00.632" endtime="20230321 12:57:00.633"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${texto_elemento_preco}</var>
+<arg>id=com.novapontocom.extra:id/tv_cart_old_product_price</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230321 12:57:00.698" level="INFO">Element 'id=com.novapontocom.extra:id/tv_cart_old_product_price' text is 'R$ 3.399,00' </msg>
+<msg timestamp="20230321 12:57:00.698" level="INFO">criteria is com.novapontocom.extra:id/tv_cart_old_product_price</msg>
+<msg timestamp="20230321 12:57:00.698" level="INFO">${texto_elemento_preco} = R$ 3.399,00</msg>
+<status status="PASS" starttime="20230321 12:57:00.633" endtime="20230321 12:57:00.699"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${texto_preco_esperado}</var>
+<arg>R$ 3.399,00</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230321 12:57:00.699" level="INFO">${texto_preco_esperado} = R$ 3.399,00</msg>
+<status status="PASS" starttime="20230321 12:57:00.699" endtime="20230321 12:57:00.699"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${texto_elemento_preco}</arg>
+<arg>${texto_preco_esperado}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230321 12:57:00.699" endtime="20230321 12:57:00.700"/>
+</kw>
+<status status="PASS" starttime="20230321 12:57:00.420" endtime="20230321 12:57:00.700"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230321 12:57:00.700" endtime="20230321 12:57:01.122"/>
+</kw>
+<doc>Escolha do produto obs como o app é comercial pode haver variação no preço no momento da correção</doc>
+<tag>geladeira</tag>
+<status status="PASS" starttime="20230321 12:56:07.402" endtime="20230321 12:57:01.123"/>
+</test>
+<doc>Valida Escolha de Produto no App do Extra</doc>
+<status status="PASS" starttime="20230321 12:56:07.200" endtime="20230321 12:57:01.124"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">geladeira</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCaseEscolhaProduto">TestCaseEscolhaProduto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
